@@ -1,0 +1,110 @@
+.divCardMain {
+  color: #fff;
+  padding: 0 18px;
+  background-color: var(--background-secondary);
+  display: flex;
+  flex-direction: column;
+  width: 328px;
+  height: 517px;
+  border-radius: 8px;
+}
+.divCardHeader {
+  margin: 4px 0 6px 0;
+  height: 29px;
+  color: var(--secondary);
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  gap: 4px;
+}
+.sinopsisText {
+  margin: 0;
+}
+
+.imgCardMain {
+  border-radius: 4px;
+}
+.divSinopsisContainer{
+  height: 420px;
+  width: 100%;
+  overflow-y: scroll;
+}
+.divSinopsisHeader{
+  display: flex;
+  justify-content: space-between;
+}
+.divSinopsisBody{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  padding-top: 27px;
+  /* min-height: 318px; */
+
+gap: 26px;
+}
+.sinopsisTextMargin{
+  margin: 4px 0;
+}
+.sinopsisBodyText{
+  line-height: 26px;
+}
+
+.divSinopsisContainer::-webkit-scrollbar {
+ width: 5px;
+height: 4px;
+}
+
+
+.divSinopsisContainer::-webkit-scrollbar-track {
+  background:none;
+}
+ 
+
+.divSinopsisContainer::-webkit-scrollbar-thumb {
+  background: var(--background);
+  border-radius: 10px;
+  height:2px;
+} 
+
+
+
+
+.divCardImage{
+  height: 420px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+.divImgCardPlatform{
+  position: absolute;
+  bottom: 10px;
+  left: 9px;
+  display: flex;
+  flex-direction: column;
+  max-width: 56px;
+  gap: 8px;
+}
+.imgCardPlatform {
+  width: 56px;
+  height: 32px;
+}
+.divCardFooter {
+  height: 36px;
+  width: 100%;
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.divCardRaiting {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.imgCardRaiting {
+  max-width: 35px;
+}
