@@ -61,7 +61,16 @@ function getTrailer(mediaId) {
 }
 
 //Nano: Función para construir el objeto media con la información necesaria para nuestro filtros
-export async function serieBuilder(mediaId, country) {
+export async function serieBuilder(mediaId, lists, country) {
+  //Nano: Extraigo las listas
+  const thisMediaLists =
+    lists.length > 0
+      ? lists.find(
+          (media) =>
+            media.media.mediaId == mediaId && media.media.mediaType == "serie"
+        )
+      : null;
+
   //Nano: Hago la llamada a la API de detalles
   const details = await getDetails(mediaId);
   if (details.id) {
@@ -113,6 +122,8 @@ export async function serieBuilder(mediaId, country) {
       })),
       trailer: `${trailer}`,
       type: "serie",
+      watched: thisMediaLists && thisMediaLists.watched,
+      my_list: thisMediaLists && thisMediaLists.my_list,
     };
     return media;
   }

@@ -16,16 +16,14 @@ export default function NavBar(props) {
   const router = useRouter();
 
   async function handleWatchList() {
-    console.log("handle");
     const res = await isLogged();
     if (res.logged == true) {
-      router.push("/watch-list");
+      router.push("/my-list");
     } else {
       setShowLogContainer(true);
     }
   }
   async function handleProfile() {
-    console.log("handle");
     const res = await isLogged();
     if (res.logged == true) {
       router.push("/profile");
